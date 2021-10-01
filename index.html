@@ -23,7 +23,7 @@
 </html>
 
 <script>
- fuction saveNote() {
+ function saveNote() {
   name = document.getElementById('name');
   encoded_desc = btoa(document.getElementById('desc'));
   document.cookie = name + "=" + encoded_desc;
