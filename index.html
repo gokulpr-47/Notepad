@@ -13,10 +13,19 @@
         <form action="">
             <div class="info">
                 <label for="Name">Name:</label>
-                <input type="text" class="name" placeholder="Enter name" name="Name">
+                <input id="name" type="text" class="name" placeholder="Enter name" name="Name">
             </div>
-            <textarea name="description" class="description" cols="30" rows="30" placeholder="Enter Description here........"></textarea>
+            <textarea name="description" id="desc" class="description" cols="30" rows="30" placeholder="Enter Description here........"></textarea>
+            <button onclick="saveNote()">Save note!</button>
         </form>
     </div>
 </body>
 </html>
+
+<script>
+ fuction saveNote() {
+  name = document.getElementById('name');
+  encoded_desc = btoa(document.getElementById('desc'));
+  document.cookie = name + "=" + encoded_desc;
+ }
+</script>
